@@ -3,11 +3,21 @@
   src: url(../fonts/underground.woff); /* url of the font */
 }
 
+@font-face {
+  font-family: "P22 Johnston Underground Light"; /* set name */
+  src: url(../fonts/underground-light.woff2); /* url of the font */
+}
+
+
 :root, body {
-  font-family: "P22 Johnston Underground", sans-serif;
-  text-align: center;
+  font-family: "P22 Johnston Underground Light", sans-serif;
   color: black;
   background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "P22 Johnston Underground", sans-serif;
+  color: #000099;
 }
 
 a{
@@ -19,11 +29,26 @@ a:visited {
 }
 
 h1 {
-    color: #000099;
+    text-align: center;
 }
 
-#events {
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#content {
     text-align: left;
     max-width: 30em;
     margin: 1em auto;
+}
+
+#content p {
+  margin-left: 2em;
+}
+
+.nowrap {
+  white-space: nowrap;
 }

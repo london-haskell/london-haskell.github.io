@@ -29,6 +29,8 @@ main = hakyll $ do
             getResourceBody >>= saveSnapshot "resource"
 
     match "templates/*" $ compile templateBodyCompiler
+    
+    match "pages/*.md" $ compile pandocCompiler
         
     create ["index.html"] $ do
         route idRoute
@@ -43,7 +45,8 @@ main = hakyll $ do
                             ) :: Context String) 
                             (recentFirst =<< loadAllSnapshots ("events/*.md" .&&. hasNoVersion) "rendered")
 
-            makeItem ""
+            loadBody "pages/index.md"
+                >>= makeItem
                 >>= loadAndApplyTemplate "templates/index.html" ctx
                 >>= relativizeUrls
 
