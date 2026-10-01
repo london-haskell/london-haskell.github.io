@@ -1,0 +1,14 @@
+<div id="events">
+    <h2>Events</h2>
+    <ul>
+     $for(events)$
+        <li>
+            $date$ @ $location$
+            <ul>
+                <li><a href="$url$">Introductory Slides</a></li>
+                <li><a href="$event-page$">Event Page</a></li>
+            </ul>
+        </li>
+     $endfor$
+    </ul>
+</div>

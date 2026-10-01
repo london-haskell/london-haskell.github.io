@@ -6,6 +6,7 @@ import qualified Text.Pandoc as P
 import qualified Data.Text as T
 import AddQRCode (addQRCode)
 import Data.Function ((&))
+import Data.Monoid (Ap(..))
 
 extractTitleLocation :: String -> String
 extractTitleLocation =T.unpack . T.intercalate "-". drop 3 . T.splitOn "-" .  T.pack
@@ -35,7 +36,7 @@ main = hakyll $ do
     create ["index.html"] $ do
         route idRoute
         compile $ do
-            let ctx = defaultContext
+            let eventCtx = defaultContext
                     <> listField 
                             "events" 
                             ((urlField "url"
@@ -45,9 +46,14 @@ main = hakyll $ do
                             ) :: Context String) 
                             (recentFirst =<< loadAllSnapshots ("events/*.md" .&&. hasNoVersion) "rendered")
 
-            loadBody "pages/index.md"
+            getAp (foldMap Ap 
+                [ loadBody "pages/index.md"
+                , makeItem "" 
+                    >>= loadAndApplyTemplate "templates/events.html" eventCtx 
+                    >>= pure . itemBody
+                ])
                 >>= makeItem
-                >>= loadAndApplyTemplate "templates/index.html" ctx
+                >>= loadAndApplyTemplate "templates/index.html" defaultContext
                 >>= relativizeUrls
 
     match "events/*.md" $ do
