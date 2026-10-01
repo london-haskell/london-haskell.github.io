@@ -2,6 +2,7 @@
 light: true
 ratio43: true
 event-page: https://luma.com/aslwdv0g
+location-page: https://artificial.io/ 
 ---
 
 

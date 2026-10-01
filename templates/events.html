@@ -3,7 +3,12 @@
     <ul>
      $for(events)$
         <li>
-            $date$ @ $location$
+            $date$ @ 
+                $if(location-page)$
+                    <a href="$location-page$">$location$</a>
+                $else$
+                    $location$
+                $endif$
             <ul>
                 <li><a href="$url$">Introductory Slides</a></li>
                 <li><a href="$event-page$">Event Page</a></li>

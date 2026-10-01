@@ -4,6 +4,7 @@ ratio43: true
 embed-css: true
 #display-notes: true
 event-page: https://luma.com/70s76zly
+location-page: https://permutive.com/
 ---
 
 
