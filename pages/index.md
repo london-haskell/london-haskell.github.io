@@ -12,3 +12,5 @@ If you have any questions, please email us at
 <span class="nowrap">
 `london.haskell.meetup` [AT] `gmail.com`.
 </span>
+
+We welcome talks which are accessible for people of various experience levels.
