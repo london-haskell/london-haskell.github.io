@@ -2,7 +2,8 @@
 light: true
 ratio43: true
 event-page: https://luma.com/aslwdv0g
-location-page: https://artificial.io/ 
+location-page: https://artificial.io/
+#display-notes: true
 ---
 
 
@@ -14,9 +15,11 @@ location-page: https://artificial.io/
 berlin code of conduct: https://berlincodeofconduct.org/en
 :::
 
---- 
+---
 
-![](/assets/images/artificial.svg){class=center}
+![](/assets/images/artificial/logo-wordmark-offblack.svg){.horizontally-centered .padded width=55%}
+
+![](/assets/images/artificial/team-2025-bw.jpg){.horizontally-centered width=80%}
 
 :::notes
 :::

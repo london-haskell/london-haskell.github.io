@@ -145,6 +145,11 @@ img.center, svg.center {
   width: 300px;
 }
 
+img.padded, svg.padded {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
 img.right {
   right: 50%;
   margin-bottom: 2rem;
