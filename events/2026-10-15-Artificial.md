@@ -33,6 +33,15 @@ berlin code of conduct: https://berlincodeofconduct.org/en
 :::notes
 :::
 
+--- 
+
+# We Want You To Talk
+
+[QR_CODE_HERE](https://docs.google.com/forms/d/e/1FAIpQLSdooVoZbGVjCuPHgmBwRG-l6JjmsUyjawNroVpt8t9Y-x_pkw/viewform){.qrcode .horizontally-centered width=300px height=300px}
+
+:::notes
+:::
+
 ---
 
 # London Haskell 
