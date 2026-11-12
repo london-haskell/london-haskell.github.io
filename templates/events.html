@@ -10,6 +10,9 @@
                     $location$
                 $endif$
             <ul>
+                $if(sponsor-name)$
+                 <li><a href="$sponsor-page$">Sponsored by $sponsor-name$</a></li>
+                $endif$
                 <li><a href="$url$">Introductory Slides</a></li>
                 <li><a href="$event-page$">Event Page</a></li>
             </ul>
