@@ -48,7 +48,7 @@
             mkShellArgs.name = "ghc912";
             hoogle = false;
             tools = _: {
-              haskell-language-server = null;
+              haskell-language-server = pkgs.haskell.packages.ghc912.haskell-language-server;
               hlint = null;
               ghcid = null;
               # 2026-09-14: not built by Nixpkgs & takes ages, just use prebuilt
