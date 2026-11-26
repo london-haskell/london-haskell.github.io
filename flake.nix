@@ -45,7 +45,7 @@
           settings.network.check = false;
           settings.unicode-data.check = false;
           devShell = {
-            mkShellArgs.name = "ghc914";
+            mkShellArgs.name = "ghc912";
             hoogle = false;
             tools = _: {
               haskell-language-server = null;
