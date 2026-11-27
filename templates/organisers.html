@@ -1,0 +1,30 @@
+<div id="organisers">
+    <h2>Organisers</h2>
+    <ul>
+        $for(organisers)$
+            <li>
+                <img class="avatar" src="$picture$">
+                <div>
+                    <span class="name">$name$</span>
+                    <div class="links">
+                        $if(github)$
+                        <a href="$github$"><img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg"></a>
+                        $endif$
+                        $if(haskell)$
+                        <a href="$haskell$"><img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/haskell.svg"></a>
+                        $endif$
+                        $if(youtube)$
+                        <a href="$youtube$"><img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/youtube.svg"></a>
+                        $endif$
+                        $if(website)$
+                        <a href="$website$"><img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/globe.svg"></a>
+                        $endif$
+                        $if(email)$
+                            <a href="mailto:$email$"><img src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg"></a>
+                        $endif$
+                    </div>
+                </div>
+            </li>
+        $endfor$
+    </ul>
+</div>

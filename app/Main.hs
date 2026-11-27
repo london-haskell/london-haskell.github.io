@@ -33,6 +33,8 @@ main = hakyll $ do
     
     match "pages/*.md" $ compile pandocCompiler
         
+    match "organisers/*.md" $ compile getResourceBody
+
     create ["index.html"] $ do
         route idRoute
         compile $ do
@@ -45,9 +47,17 @@ main = hakyll $ do
                                 <> metadataField
                             ) :: Context String) 
                             (recentFirst =<< loadAllSnapshots ("events/*.md" .&&. hasNoVersion) "rendered")
+                organiserCtx = defaultContext
+                    <> listField
+                            "organisers"
+                            (metadataField :: Context String)
+                            (loadAll "organisers/*.md")
 
             getAp (foldMap Ap 
                 [ loadBody "pages/index.md"
+                , makeItem "" 
+                    >>= loadAndApplyTemplate "templates/organisers.html" organiserCtx
+                    >>= pure . itemBody
                 , makeItem "" 
                     >>= loadAndApplyTemplate "templates/events.html" eventCtx 
                     >>= pure . itemBody
