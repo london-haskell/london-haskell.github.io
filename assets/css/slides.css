@@ -146,7 +146,7 @@ img.center, svg.center {
 }
 
 img.padded, svg.padded {
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   padding-top: 3rem;
 }
 
